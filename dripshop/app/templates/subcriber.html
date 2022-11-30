@@ -1,0 +1,24 @@
+{% extends 'dashbord.html' %}
+{% block content %}
+    {% load static %}
+    <div class="main-content">
+        <div class="table">
+            <table class="table table-hover table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                {% for subcribers in subcriber %}
+                    <tr>
+
+                        <td>{{ subcribers.fullname }}</td>
+                        <td>{{ subcribers.email }}</td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+    </div>
+{% endblock %}

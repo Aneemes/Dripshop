@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+<div class="container" style="align-items: center;">
+    <legend style="align-content: center;">Subscription Form</legend>
+    <div class="pict">
+
+    <div class="divs">
+        <form method="POST">
+        <fieldset>
+            
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+        </form>
+    </div>
+    </div>
+</div>
+<style>
+    .pict {
+        height: 900px;;
+      background-image: url('static/img/adi6.jpg');
+      image-rendering: auto;
+      background-repeat: no-repeat;
+    }
+
+    .divs{
+        margin-top: auto;
+        margin: auto;
+        width: 50%;
+        padding-left: 130px;
+        padding-top: 250px;
+    }
+</style>
+    
+{% endblock %}

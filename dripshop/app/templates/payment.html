@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {%  load static %}
+    <div class=" container qrr">
+        <h1> <i class="fa fa-align-center" aria-hidden="true">Scan Me</i></h1>
+        
+        <img class="imageqr " src="static/img/qr.png">
+        
+    </div>
+    
+
+    <style>
+        .qrr{
+            height: 100%;
+            width:100%;
+            background: #648880 !important;
+            background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50) !important;
+        }
+        h1{
+            padding-top: 70px;
+            margin-left: 400px;
+            margin-right: auto;
+        }
+       .imageqr{
+           padding-top: 200px;
+        display: block;
+        margin-left: 400px;
+        margin-right: auto;
+       }
+    </style>
+    {% endblock %}

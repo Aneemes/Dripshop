@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+    {% load static %}
+    {% block title %}
+    <title>Title</title>
+    {% endblock %}
+    {% block content%}
+<div class = "container">
+    <div class="row">
+        {% for i in prod %}
+        <div class="col-md-4 wow animated zoomInDown" data-wow-duration="2s" data-wow-delay="0.5s">
+            <div class="card">
+                <img class="card-img-top img-fluid" style="height: 250px"   alt="shoe" src="/{{i.pic}}">
+                    <div class="card-body">
+                        <div class="card-heading "><a class="p1">{{i.name}}</a></div>
+                             <p class="card-text">{{i.description}}
+                                </p> <p class="p1">{{i.price}}</p>
+                                    <a href='/cart1/{{i.id}}' class="btn btn-danger text-dark"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a>
+                    </div>
+            </div>
+        </div>
+    {% endfor %}
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        new WOW().init();
+    </script>
+
+    {%  endblock  %}

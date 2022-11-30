@@ -1,0 +1,33 @@
+{% extends 'dashbord.html' %}
+{% block content %}
+    {% load static %}
+    <div class="main-content">
+
+        <div class="table">
+            <table class="table table-hover table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Action</th>
+                </tr>
+                {% for adminuser in adminusers %}
+                    <tr>
+
+                        <td>{{ adminuser.id }}</td>
+                        <td>{{ adminuser.adminname }}</td>
+                        <td>{{ adminuser.adminemail }}</td>
+                        <td>{{ adminuser.adminpassword }}</td>
+                        <td><a href="/edit1/{{ adminuser.id }}" class="btn btn-primary stretched-link">edit</a>|<a
+                                href="/admindelete/{{ adminuser.id }}" class="btn btn-primary stretched-link">delete</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+    </div>
+{% endblock %}

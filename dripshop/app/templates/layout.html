@@ -1,0 +1,203 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>The Drip Shop</title>
+
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="static/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <link rel="shortcut icon" href='{% static "img/logo.png" %}' />
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="pull-left" href="/"><img src='{% static "img/logo2.png" %}' width="60x" height="60px" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/"><span class=" text-dark">Home</span> <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/puma" onMouseOver="this.style.color='red'"
+                        onMouseOut="this.style.color='black'">Shoes</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        onMouseOver="this.style.color='green'" onMouseOut="this.style.color='black'">
+                        Brands
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/nike">Nike</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/adidas">Adidas</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/puma">Puma</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/about" onMouseOver="this.style.color='red'"
+                        onMouseOut="this.style.color='black'">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/login" onMouseOver="this.style.color='red'"
+                        onMouseOut="this.style.color='black'">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/create" onMouseOver="this.style.color='red'"
+                        onMouseOut="this.style.color='black'">Sign Up</a>
+                </li>
+
+
+
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">About Us</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>Softwarica</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>12345678</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i>gmail@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Hot deals</a></li>
+                                <li><a href="/nike">Men</a></li>
+                                <li><a href="/adidas">Women</a></li>
+                                <li><a href="/puma">Child</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/form">Contact Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="/cart">View Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="/form">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <p>Copyright © 2021 The Drip Shop Inc. All rights reserved.<br>
+
+                            Designed by: <i>Animesh Nepal</i></p>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+
+    <div class="container-fluid bg-dark">
+                    <div class="head-content3 fa-pull-right">
+
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        <a href="/adminlogin"><b>Admin login</b></a>
+                
+                    </div>
+                    </div>
+        <style>
+            a:hover,
+            a:active {
+                color: #FF3603;
+                text-decoration: none;
+                outline: 0;
+            }
+
+            .mainnav ul li a:hover,
+            a:active {
+                color: #FF3603;
+                text-decoration: none;
+                outline: 0;
+            }
+        </style>
+
+</body>
+
+
+</html>

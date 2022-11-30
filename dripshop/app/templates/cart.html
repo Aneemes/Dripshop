@@ -1,0 +1,134 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<!-- cart item details -->
+<div class="container cart-page">
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>SubTotal</th>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src ="static/img/nike8.jpg" style="height: 150; width: 230;">
+                    <div>
+                        <p>Ultraboost</p>
+                        <small>Price: $65.00</small><br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>50$</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src ="static/img/adi1.jpg" style="height: 150; width: 210;">
+                    <div>
+                        <p>Ultraboost</p>
+                        <small>Price: $120.00</small><br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>120$</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src ="static/img/nike2.jpg" style="height: 150; width: 210;">
+                    <div>
+                        <p>Ultraboost</p>
+                        <small>Price: $550.00</small><br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>550$</td>
+        </tr>
+    </table>
+
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>SubTotal</td>
+                <td>720$</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>93$</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>813$</td>
+            </tr>
+        </table>
+    </div>
+    <a class="btn btn-success text-dark fa-pull-right" href="/payment"><i class="fa fa-cart-plus" aria-hidden="true"></i> Checkout </a>
+</div>
+
+
+<style>
+   
+.cart-page{
+  margin:80px auto;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+.cart-info{
+    display:flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align:left;
+    padding:5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight:normal;
+}
+td{
+    padding:10px 5px;
+}
+td input{
+    width:40px;
+    height:20px;
+    padding:5px;
+}
+td a{
+    color:#ff523b;
+    font-size: 12px;
+}
+
+
+.total-price{
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+.total-price-table{
+    border-top: 3px solid #ff523b !important;
+    width: 100% !important;
+    max-width: 400px !important;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+div{
+    padding:15px;
+}
+
+</style>
+{% endblock %}

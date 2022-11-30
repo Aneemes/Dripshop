@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>The Drip Shop</title>
+    <link rel="stylesheet" href='{% static "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" %}'>
+
+    <link href='{% static "https://fonts.googleapis.com/css?family=Questrial|Raleway:700,900" %}' rel="stylesheet">
+
+    <!-- Google font -->
+    <link href='{% static "https://fonts.googleapis.com/css?family=Montserrat:400,500,700" %}' rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'/>
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/slick.css" %}'/>
+    <link type="text/css" rel="stylesheet" href='{% static "css/slick-theme.css" %}'/>
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/nouislider.min.css" %}'/>
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href='{% static "css/font-awesome.min.css" %}'>
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" href="static/css/admin.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/login.css" %}'>
+    <!-- javascripts -->
+    <script src='{% static "js/login.js" %}'></script>
+    <!-- taplogo -->
+    <link rel="shortcut icon" href='{% static "img/logo.png" %}'/>
+</head>
+
+<body>
+<div class="header">
+    <a  href="/"><img src='{% static "img/logo2.png" %}' alt="logo"  width="70x" height="60px" ></a>
+    
+    </a>
+
+    {% csrf_token %}
+
+</div>
+<div class="side-nav">
+    <nav>
+        <ul>
+            <li>
+                <a href="/userdetail">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>User-Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="/admintable">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>admintable</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="/create1">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Add-Admin</span>
+                </a>
+            </li>
+            <li>
+                <a href="/admin/addPro">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Add New Shoes</span>
+                </a>
+            </li>
+            <li>
+                <a href="/subcriber">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Subscribers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<style>
+    body {
+        background: #648880 !important;
+        background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50) !important;
+        }
+    .side-nav{
+        background:rgb(99, 167, 167);
+    }
+    .header{
+        background:rgb(99, 167, 167);
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>

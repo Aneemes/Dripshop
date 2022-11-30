@@ -1,0 +1,107 @@
+{​% extends 'layout.html' %}​
+{​% load static %}​
+{​% block content %}​
+<!-- cart item details -->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>SubTotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="/{​{​prod.Pic}​}​" style="height: 150; width: 230;">
+                    <div>
+                        <p>{​{​prod.name}​}​</p>
+                        <small>Price: {​{​prod.price}​}​</small><br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>{​{​prod.price}​}​</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>SubTotal</td>
+                <td>{​{​prod.price}​}​</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>93$</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>813$</td>
+            </tr>
+        </table>
+    </div>
+    <a class="btn btn-success text-dark fa-pull-right" href="/payment"><i aria-hidden="true"
+                                                                          class="fa fa-cart-plus"></i> Checkout </a>
+</div>
+
+<style>
+   
+    .cart-page{
+      margin:80px auto;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+    }
+    .cart-info{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    th{
+        text-align:left;
+        padding:5px;
+        color: #fff;
+        background: #ff523b;
+        font-weight:normal;
+    }
+    td{
+        padding:10px 5px;
+    }
+    td input{
+        width:40px;
+        height:20px;
+        padding:5px;
+    }
+    td a{
+        color:#ff523b;
+        font-size: 12px;
+    }
+    
+    
+    .total-price{
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+    .total-price-table{
+        border-top: 3px solid #ff523b !important;
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+    td:last-child{
+        text-align: right;
+    }
+    th:last-child{
+        text-align: right;
+    }
+    
+    div{
+        padding:15px;
+    }
+    
+    </style>
+{​% endblock %}​
+    
+    
+  
+  
+
